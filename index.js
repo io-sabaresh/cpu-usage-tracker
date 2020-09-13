@@ -9,7 +9,7 @@ const PORT_TO_MONITOR = 5100;
 const PM2_PROCESS_NAME = 'Task-1';
 const CPU_THRESHOLD = 70; // in %
 
-cron.schedule("* * * * *", async () => {
+cron.schedule("* * * * * *", async () => {
     try {
         // Find the Process details of a specific PORT
         const process = await findProcess('port', PORT_TO_MONITOR);
